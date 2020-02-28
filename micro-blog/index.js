@@ -21,20 +21,22 @@ let post2 = {
   number: 2
 };
 
-let template = `<img class="w-full" src="${post2.image}" alt="${post2.image_alt}">
+let template = function(post) {
+  return `<img class="w-full" src="${post.image}" alt="${post.image_alt}">
 <div class="px-6 py-4">
-  <div class="font-bold text-xl mb-2">${post2.title}</div>
+  <div class="font-bold text-xl mb-2">${post.title}</div>
   <p class="text-gray-700 text-base"> 
-  ${post2.text}
+  ${post.text}
   </p>
 </div>
 <div class="px-6 py-4 flex items-center">
   <img class="w-10 h-10 rounded-full mr-4" src="img/jonathan.jpg" alt="Avatar of Jonathan Reinink">
   <div class="text-sm">
     <p class="text-gray-900 leading-none">Firstname Lastname</p>
-    <p class="text-gray-600">${post2.date}</p>
+    <p class="text-gray-600">${post.date}</p>
   </div>
 </div>`;
+};
 
 let div = document.createElement("div");
 div.classList.add(
@@ -48,7 +50,7 @@ div.classList.add(
   "bg-white",
   "m-6"
 );
-div.innerHTML = template;
+div.innerHTML = template(post2);
 
 let content = document.getElementById("content");
 content.append(div);
