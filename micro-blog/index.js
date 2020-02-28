@@ -23,22 +23,21 @@ let posts = [
   }
 ];
 
-let template = (post) => {
-  return `<img class="w-full" src="${post.image}" alt="${post.image_alt}">
-<div class="px-6 py-4">
-  <div class="font-bold text-xl mb-2">${post.title}</div>
-  <p class="text-gray-700 text-base"> 
-  ${post.text}
-  </p>
-</div>
-<div class="px-6 py-4 flex items-center">
-  <img class="w-10 h-10 rounded-full mr-4" src="img/jonathan.jpg" alt="Avatar of Jonathan Reinink">
-  <div class="text-sm">
-    <p class="text-gray-900 leading-none">Firstname Lastname</p>
-    <p class="text-gray-600">${post.date}</p>
+let template = (post) =>
+  `<img class="w-full" src="${post.image}" alt="${post.image_alt}">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">${post.title}</div>
+    <p class="text-gray-700 text-base"> 
+    ${post.text}
+    </p>
   </div>
-</div>`;
-};
+  <div class="px-6 py-4 flex items-center">
+    <img class="w-10 h-10 rounded-full mr-4" src="img/jonathan.jpg" alt="Avatar of Jonathan Reinink">
+    <div class="text-sm">
+      <p class="text-gray-900 leading-none">Firstname Lastname</p>
+      <p class="text-gray-600">${post.date}</p>
+    </div>
+  </div>`;
 
 let content = document.getElementById("content");
 
