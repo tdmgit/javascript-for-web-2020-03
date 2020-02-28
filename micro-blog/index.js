@@ -23,7 +23,7 @@ let posts = [
   }
 ];
 
-let template = function(post) {
+let template = (post) => {
   return `<img class="w-full" src="${post.image}" alt="${post.image_alt}">
 <div class="px-6 py-4">
   <div class="font-bold text-xl mb-2">${post.title}</div>
