@@ -1,4 +1,4 @@
-let post = {
+let post1 = {
   title: "In The Mountains",
   image: "img/card-top.jpg",
   image_alt: "Sunset in the mountains",
@@ -9,25 +9,45 @@ let post = {
   date: "Jan 18, 2020",
   number: 1
 };
-console.log(post);
+let post2 = {
+  title: "The Crowded City",
+  image: "img/barcelona.jpeg",
+  image_alt: "Barcelona",
+  text:
+    "Barcelona is a very busy city. It is full of tourists, attractions and centuries old buildings. Very beautiful, really.",
+  author: "Firstname Lastname",
+  author_image: "img/jonathan.jpg",
+  date: "Feb 28, 2020",
+  number: 2
+};
 
-let template = `<img class="w-full" src="img/barcelona.jpeg" alt="Barcelona">
+let template = `<img class="w-full" src="${post2.image}" alt="${post2.image_alt}">
 <div class="px-6 py-4">
-  <div class="font-bold text-xl mb-2">The Crowded City</div>
-  <p class="text-gray-700 text-base">
-    Barcelona is a very busy city. It is full of tourists, attractions and centuries old buildings.
+  <div class="font-bold text-xl mb-2">${post2.title}</div>
+  <p class="text-gray-700 text-base"> 
+  ${post2.text}
   </p>
 </div>
 <div class="px-6 py-4 flex items-center">
   <img class="w-10 h-10 rounded-full mr-4" src="img/jonathan.jpg" alt="Avatar of Jonathan Reinink">
   <div class="text-sm">
     <p class="text-gray-900 leading-none">Firstname Lastname</p>
-    <p class="text-gray-600">Feb 28, 2020</p>
+    <p class="text-gray-600">${post2.date}</p>
   </div>
-</div>`
+</div>`;
 
 let div = document.createElement("div");
-div.classList.add("container", "mx-auto", "max-w-sm", "rounded", "overflow-hidden", "shadow-lg", "justify-center", "bg-white", "m-6");
+div.classList.add(
+  "container",
+  "mx-auto",
+  "max-w-sm",
+  "rounded",
+  "overflow-hidden",
+  "shadow-lg",
+  "justify-center",
+  "bg-white",
+  "m-6"
+);
 div.innerHTML = template;
 
 let content = document.getElementById("content");
