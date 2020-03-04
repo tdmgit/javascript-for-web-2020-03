@@ -25,3 +25,13 @@ Template Literals
 
 Fat Arrow Functions
 - https://www.w3schools.com/Js/js_arrow_function.asp
+
+## Session 2
+
+Web Server
+- VS Code:  
+  Extensions > Live Server > install  
+  index.html > Open with Live Server
+- Atom:  
+  Packages > Settings View > Install Packages / Themes > atom-live-server > install  
+  Packages > atom-live-server > Start server
