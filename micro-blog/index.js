@@ -1,11 +1,10 @@
 let post = {
   title: "In The Mountains",
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
   image: {
     src: "img/card-top.jpg",
     alt: "Sunset in the mountains"
   },
-  text:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
   author: "Firstname Lastname",
   author_image: "img/jonathan.jpg",
   date: "Jan 18, 2020",
@@ -13,7 +12,21 @@ let post = {
 };
 console.log(post);
 
+// JSON: stringify and parse
+var stringified = JSON.stringify(post.image);
+console.log(stringified);
+var parsed = JSON.parse(stringified);
+console.log(parsed);
+
+// Get elements in the DOM
+var content = document.getElementById("content");
+console.log(content);
+
+// 1. Create new element
 let div = document.createElement("div");
+console.log(div);
+
+// Add classes to newDiv
 div.classList.add("container", "mx-auto", "max-w-sm", "rounded", "overflow-hidden", "shadow-lg", "justify-center", "bg-white", "m-6");
 div.innerHTML = "<img class=\"w-full\" src=\"img/barcelona.jpeg\" alt=\"Barcelona\">"
 + "<div class=\"px-6 py-4\">"
@@ -30,5 +43,5 @@ div.innerHTML = "<img class=\"w-full\" src=\"img/barcelona.jpeg\" alt=\"Barcelon
 + "</div>"
 + "</div>"
 
-let content = document.getElementById("content");
+// 2. Place the new element in the tree
 content.append(div);
