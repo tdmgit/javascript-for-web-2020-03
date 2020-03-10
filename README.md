@@ -9,24 +9,25 @@ JSON
 - https://www.json.org/json-en.html
 - JSON.parse() and JSON.stringify(): https://alligator.io/js/json-parse-stringify
 
-`let` and `const`
-- const: http://es6-features.org/#Constants
-- let: http://es6-features.org/#BlockScopedVariables
-- For the know-it-all: https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75
-
 DOM
 - https://www.w3schools.com/js/js_htmldom.asp
 - getElementById(): https://www.w3schools.com/jsref/met_document_getelementbyid.asp
 - querySelector(): https://www.w3schools.com/jsref/met_element_queryselector.asp
 - Tutorial: https://dev.to/iqramqra/a-beginners-guide-to-dom-manipulation-45bk
+- Adding classes: https://alligator.io/js/classlist/
+
+## Session 2
+
+`let` and `const`
+- const: http://es6-features.org/#Constants
+- let: http://es6-features.org/#BlockScopedVariables
+- For the know-it-all: https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75
 
 Template Literals
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
 Fat Arrow Functions
 - https://www.w3schools.com/Js/js_arrow_function.asp
-
-## Session 2
 
 Web Server
 - VS Code:  
