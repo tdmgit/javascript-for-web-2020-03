@@ -1,7 +1,9 @@
 let post = {
   title: "In The Mountains",
-  image: "img/card-top.jpg",
-  image_alt: "Sunset in the mountains",
+  image: {
+    src: "img/card-top.jpg",
+    alt: "Sunset in the mountains"
+  },
   text:
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
   author: "Firstname Lastname",
