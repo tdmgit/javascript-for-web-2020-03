@@ -29,6 +29,8 @@ Template Literals
 Fat Arrow Functions
 - https://www.w3schools.com/Js/js_arrow_function.asp
 
+## Session 3
+
 Web Server
 - VS Code:  
   Extensions > Live Server > install  
