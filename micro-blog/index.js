@@ -1,30 +1,34 @@
-let posts = [
+const posts = [
   {
     title: "In The Mountains",
-    image: "img/card-top.jpg",
-    image_alt: "Sunset in the mountains",
+    image: {
+      src: "img/card-top.jpg",
+      alt: "Sunset in the mountains"
+    },
     text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
-    author: "Firstname Lastname",
-    author_image: "img/jonathan.jpg",
+    author: "Teresa Holfeld",
+    author_image: "img/teresa-holfeld.jpg",
     date: "Jan 18, 2020",
     number: 1
   },
   {
     title: "The Crowded City",
-    image: "img/barcelona.jpeg",
-    image_alt: "Barcelona",
+    image: {
+      src: "img/barcelona.jpeg",
+      alt: "Barcelona"
+    },
     text:
       "Barcelona is a very busy city. It is full of tourists, attractions and centuries old buildings. Very beautiful, really.",
-    author: "Firstname Lastname",
-    author_image: "img/jonathan.jpg",
+    author: "Teresa Holfeld",
+    author_image: "img/teresa-holfeld.jpg",
     date: "Feb 28, 2020",
     number: 2
   }
 ];
 
-let template = post =>
-  `<img class="w-full" src="${post.image}" alt="${post.image_alt}">
+const createPostHtml = post =>
+  `<img class="w-full" src="${post.image.src}" alt="${post.image.alt}">
   <div class="px-6 py-4">
     <div class="font-bold text-xl mb-2">${post.title}</div>
     <p class="text-gray-700 text-base"> 
@@ -32,18 +36,14 @@ let template = post =>
     </p>
   </div>
   <div class="px-6 py-4 flex items-center">
-    <img class="w-10 h-10 rounded-full mr-4" src="img/jonathan.jpg" alt="Avatar of Jonathan Reinink">
+    <img class="w-10 h-10 rounded-full mr-4" src="${post.author_image}" alt="${post.author}">
     <div class="text-sm">
-      <p class="text-gray-900 leading-none">Firstname Lastname</p>
+      <p class="text-gray-900 leading-none">${post.author}</p>
       <p class="text-gray-600">${post.date}</p>
     </div>
   </div>`;
 
-let content = document.getElementById("content");
-
-for (let i = 0; i < posts.length; i++) {
-  let post = posts[i];
-  let div = document.createElement("div");
+const addClasses = div =>
   div.classList.add(
     "container",
     "mx-auto",
@@ -55,7 +55,12 @@ for (let i = 0; i < posts.length; i++) {
     "bg-white",
     "m-6"
   );
-  div.innerHTML = template(post);
+
+const content = document.getElementById("content");
+
+for (let i = 0; i < posts.length; i++) {
+  const div = document.createElement("div");
+  addClasses(div);
+  div.innerHTML = createPostHtml(posts[i]);
   content.append(div);
 }
-
