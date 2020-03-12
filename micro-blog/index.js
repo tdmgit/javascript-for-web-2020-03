@@ -1,29 +1,133 @@
 const posts = [
   {
-    title: "In The Mountains",
-    image: {
-      src: "img/card-top.jpg",
-      alt: "Sunset in the mountains"
-    },
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.",
-    author: "Teresa Holfeld",
-    author_image: "img/teresa-holfeld.jpg",
-    date: "Jan 18, 2020",
-    number: 1
+      title: "Karibik",
+      text: "Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+      image: {
+          src: "img/karibik.jpg",
+          alt: "Karibik"
+      },
+      author: "Thorben Dyk",
+      author_image: "img/td.png",
+      author_image_alt: "Avatar of Thorben Dyk",
+      date: "Jan 18, 2020",
+      number: 001
   },
   {
-    title: "The Crowded City",
+      title: "Die Brücke von Avignon",
+      text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+      image: {
+          src: "img/avignon.jpg",
+          alt: "Die Brücke von Avignon" 
+      },
+      author: "Thorben Dyk",
+      author_image: "img/td.png",
+      author_image_alt: "Avatar of Thorben Dyk",
+      date: "March 11, 2020",
+      number: 002
+  },
+  {
+      title: "Trinken in Dublin",
+      text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+      image: {
+          src: "img/dublin.jpg",
+          alt: "Die Brücke von Avignon" 
+      },
+      author: "Thorben Dyk",
+      author_image: "img/td.png",
+      author_image_alt: "Avatar of Thorben Dyk",
+      date: "March 11, 2020",
+      number: 003
+  },
+  {
+      title: "An der Schlei",
+      text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+      image: {
+          src: "img/kappeln.jpg",
+          alt: "Die Brücke von Avignon" 
+      },
+      author: "Thorben Dyk",
+      author_image: "img/td.png",
+      author_image_alt: "Avatar of Thorben Dyk",
+      date: "March 11, 2020",
+      number: 004
+  },
+  {
+      title: "Coney Island",
+      text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+      image: {
+          src: "img/newyork.jpg",
+          alt: "Die Brücke von Avignon" 
+      },
+      author: "Thorben Dyk",
+      author_image: "img/td.png",
+      author_image_alt: "Avatar of Thorben Dyk",
+      date: "March 11, 2020",
+      number: 005
+  },
+  {
+      title: "Nordsee",
+      text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+      image: {
+          src: "img/nordsee.jpg",
+          alt: "Die Brücke von Avignon" 
+      },
+      author: "Thorben Dyk",
+      author_image: "img/td.png",
+      author_image_alt: "Avatar of Thorben Dyk",
+      date: "March 11, 2020",
+      number: 006
+  },
+  {
+      title: "In Südfrankreich in Orange",
+      text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+      image: {
+          src: "img/orange.jpg",
+          alt: "Die Brücke von Avignon" 
+      },
+      author: "Thorben Dyk",
+      author_image: "img/td.png",
+      author_image_alt: "Avatar of Thorben Dyk",
+      date: "March 11, 2020",
+      number: 007
+  },
+  {
+    title: "Ostsee",
+    text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
     image: {
-      src: "img/barcelona.jpeg",
-      alt: "Barcelona"
+        src: "img/ostsee.jpg",
+        alt: "Die Ostsee" 
     },
-    text:
-      "Barcelona is a very busy city. It is full of tourists, attractions and centuries old buildings. Very beautiful, really.",
-    author: "Teresa Holfeld",
-    author_image: "img/teresa-holfeld.jpg",
-    date: "Feb 28, 2020",
-    number: 2
+    author: "Thorben Dyk",
+    author_image: "img/td.png",
+    author_image_alt: "Avatar of Thorben Dyk",
+    date: "March 11, 2020",
+    number: 007
+  },
+  {
+    title: "Das Rote Meer",
+    text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+    image: {
+        src: "img/rotesmeer.jpg",
+        alt: "Rotes Meer"
+    },
+    author: "Thorben Dyk",
+    author_image: "img/td.png",
+    author_image_alt: "Avatar of Thorben Dyk",
+    date: "March 11, 2020",
+    number: 007
+  },
+  {
+    title: "Auf Sylt",
+    text: "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+    image: {
+        src: "img/sylt.jpg",
+        alt: "Blick von Sylt weg" 
+    },
+    author: "Thorben Dyk",
+    author_image: "img/td.png",
+    author_image_alt: "Avatar of Thorben Dyk",
+    date: "March 11, 2020",
+    number: 007
   }
 ];
 
