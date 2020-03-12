@@ -58,3 +58,4 @@ for (let i = 0; i < posts.length; i++) {
   div.innerHTML = template(post);
   content.append(div);
 }
+
