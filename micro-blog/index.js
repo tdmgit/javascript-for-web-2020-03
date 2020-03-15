@@ -10,7 +10,8 @@ const posts = [
       author_image: "img/td.png",
       author_image_alt: "Avatar of Thorben Dyk",
       date: "Jan 18, 2020",
-      number: 001
+      location: "Dominikanische Republik",
+      number: "001"
   },
   {
       title: "Die Brücke von Avignon",
@@ -23,7 +24,8 @@ const posts = [
       author_image: "img/td.png",
       author_image_alt: "Avatar of Thorben Dyk",
       date: "March 11, 2020",
-      number: 002
+      location: "Avignon",
+      number: "002"
   },
   {
       title: "Trinken in Dublin",
@@ -36,7 +38,8 @@ const posts = [
       author_image: "img/td.png",
       author_image_alt: "Avatar of Thorben Dyk",
       date: "March 11, 2020",
-      number: 003
+      location: "Dublin",
+      number: "003"
   },
   {
       title: "An der Schlei",
@@ -49,7 +52,8 @@ const posts = [
       author_image: "img/td.png",
       author_image_alt: "Avatar of Thorben Dyk",
       date: "March 11, 2020",
-      number: 004
+      location: "Kappeln",
+      number: "004"
   },
   {
       title: "Coney Island",
@@ -62,7 +66,8 @@ const posts = [
       author_image: "img/td.png",
       author_image_alt: "Avatar of Thorben Dyk",
       date: "March 11, 2020",
-      number: 005
+      location: "New York",
+      number: "005"
   },
   {
       title: "Nordsee",
@@ -75,7 +80,8 @@ const posts = [
       author_image: "img/td.png",
       author_image_alt: "Avatar of Thorben Dyk",
       date: "March 11, 2020",
-      number: 006
+      location: "Spiekeroog",
+      number: "006"
   },
   {
       title: "In Südfrankreich in Orange",
@@ -88,7 +94,8 @@ const posts = [
       author_image: "img/td.png",
       author_image_alt: "Avatar of Thorben Dyk",
       date: "March 11, 2020",
-      number: 007
+      location: "Orange",
+      number: "007"
   },
   {
     title: "Ostsee",
@@ -101,7 +108,8 @@ const posts = [
     author_image: "img/td.png",
     author_image_alt: "Avatar of Thorben Dyk",
     date: "March 11, 2020",
-    number: 007
+    location: "Pelzerhaken",
+    number: "008"
   },
   {
     title: "Das Rote Meer",
@@ -114,7 +122,8 @@ const posts = [
     author_image: "img/td.png",
     author_image_alt: "Avatar of Thorben Dyk",
     date: "March 11, 2020",
-    number: 007
+    location: "Sinai",
+    number: "009"
   },
   {
     title: "Auf Sylt",
@@ -127,23 +136,30 @@ const posts = [
     author_image: "img/td.png",
     author_image_alt: "Avatar of Thorben Dyk",
     date: "March 11, 2020",
-    number: 007
+    location: "Sylt",
+    number: "010"
   }
 ];
 
 const createPostHtml = post =>
-  `<img class="w-full" src="${post.image.src}" alt="${post.image.alt}">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">${post.title}</div>
-    <p class="text-gray-700 text-base"> 
-    ${post.text}
-    </p>
-  </div>
-  <div class="px-6 py-4 flex items-center">
-    <img class="w-10 h-10 rounded-full mr-4" src="${post.author_image}" alt="${post.author}">
-    <div class="text-sm">
-      <p class="text-gray-900 leading-none">${post.author}</p>
-      <p class="text-gray-600">${post.date}</p>
+  `<div class="container mx-auto max-w-sm rounded overflow-hidden shadow-lg justify-center bg-white m-6">
+    <img class="w-full" src="${post.image.src}" alt="${post.image.alt}">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">${post.title}</div>
+      <p class="text-gray-700 text-base"> 
+      ${post.text}
+      </p>
+    </div>
+    <div class="px-6 py-4 flex items-center">
+      <img class="w-10 h-10 rounded-full mr-4" src="${post.author_image}" alt="${post.author}">
+      <div class="text-sm">
+        <p class="text-gray-900 leading-none">${post.author}</p>
+        <p class="text-gray-600">${post.date}</p>
+      </div>
+    </div>
+    <div class="px-6 py-2">
+      <hr>
+      <p class="text-gray-700 text-base py-2 text-right text-xs">${post.location}</p>
     </div>
   </div>`;
 
@@ -163,8 +179,17 @@ const addClasses = div =>
 const content = document.getElementById("content");
 
 for (let i = 0; i < posts.length; i++) {
+  // leeres DiV erstellen:
   const div = document.createElement("div");
+ 
+  /* 
   addClasses(div);
+  */
+
+  // das leere DIV wird gefüllt:
   div.innerHTML = createPostHtml(posts[i]);
-  content.append(div);
+
+  // das erste child element nehmen und appenden:
+  content.append(div.firstChild);
+  // das äußere DIV Element wird nicht berücksichtigt
 }
